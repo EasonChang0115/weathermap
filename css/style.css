@@ -1,0 +1,290 @@
+@charset "UTF-8";
+* {
+  font-family: '微軟正黑體';
+}
+
+svg {
+  height: 100vh;
+}
+
+body {
+  background-color: #222;
+}
+
+path {
+  stroke: white;
+  fill: transparent;
+  transition: 0.5s;
+}
+
+path:hover {
+  fill: #B99362;
+  transform: translate(-5px, -5px);
+}
+
+.scene {
+  display: inline-block;
+  position: relative;
+  left: 5%;
+}
+
+.info {
+  position: absolute;
+  right: 30%;
+  top: 20%;
+  color: silver;
+  font-size: 30px;
+}
+
+.info h1, .info h2 {
+  color: #a07a48;
+  margin: 0;
+}
+
+.info h1 span, .info h2 span {
+  color: #c9ab85;
+}
+
+.info hr {
+  width: 140px;
+  margin-left: 0;
+  border: none;
+  border-bottom: solid 2px #ffdf33;
+}
+
+.info .forcase h4 {
+  margin: 10px;
+}
+
+.rain {
+  width: 4px;
+  height: 15px;
+  position: relative;
+  left: 45px;
+  bottom: 15px;
+  animation: raindrop 1s infinite linear;
+  background-color: #76E2F4;
+}
+
+.rain2 {
+  left: 70px;
+  bottom: 10px;
+  animation-delay: -0.4s;
+}
+
+.rain3 {
+  left: 30px;
+  bottom: 10px;
+  animation-delay: -0.7s;
+}
+
+.rain4 {
+  left: 100px;
+  bottom: 10px;
+  animation-delay: -1s;
+}
+
+@keyframes raindrop {
+  0% {
+    transform: translateY(40px);
+  }
+  100% {
+    transform: translateY(70px);
+    opacity: 0;
+  }
+}
+
+.rainny {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  width: 200px;
+  height: 200px;
+}
+
+.cloud {
+  width: 150px;
+  height: 45px;
+  position: relative;
+  border-radius: 20px;
+  animation: clouddrift 2s infinite;
+  background-color: #777;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.3);
+}
+
+.cloud:before, .cloud:after {
+  border-radius: 100%;
+  content: "";
+  background-color: #777;
+  display: block;
+  width: 75px;
+  height: 75px;
+  position: absolute;
+}
+
+.cloud:before {
+  left: 24px;
+  top: -42px;
+}
+
+.cloud:after {
+  left: 53px;
+  top: -30px;
+}
+
+.cloud1 {
+  top: 40%;
+  left: 40%;
+}
+
+.cloud2 {
+  top: 40%;
+  left: 20%;
+}
+
+@keyframes clouddrift {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.SunCould {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.SunCould .sun {
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  background-color: orange;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #ffc600, -8px -8px rgba(204, 204, 0, 0) inset;
+}
+
+.SunCould .cloud1 {
+  top: 30%;
+  background-color: #fff;
+}
+
+.SunCould .cloud1:before, .SunCould .cloud1:after {
+  border-radius: 100%;
+  content: "";
+  background-color: #fff;
+  display: block;
+  width: 75px;
+  height: 75px;
+  position: absolute;
+}
+
+.SunCould .cloud2 {
+  top: 30%;
+  background-color: #fff;
+}
+
+.SunCould .cloud2:before, .SunCould .cloud2:after {
+  border-radius: 100%;
+  content: "";
+  background-color: #fff;
+  display: block;
+  width: 75px;
+  height: 75px;
+  position: absolute;
+}
+
+.sunbox {
+  display: none;
+  top: 80%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.sunbox .sun {
+  position: absolute;
+  top: 60px;
+  left: 30%;
+  background-color: orange;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: 0 0 100px #ffc600, -8px -8px rgba(204, 204, 0, 0) inset;
+  animation: sunlight 2s infinite ease;
+}
+
+@keyframes sunlight {
+  0% {
+    box-shadow: 0 0 30px #ffc600, -8px -8px rgba(204, 204, 0, 0) inset;
+  }
+  50% {
+    box-shadow: 0 0 100px #ffc600, 8px 8px rgba(204, 204, 0, 0) inset;
+  }
+  100% {
+    box-shadow: 0 0 30px #ffc600, -8px -8px rgba(204, 204, 0, 0);
+  }
+}
+
+.bclouder {
+  display: none;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  width: 200px;
+  height: 200px;
+}
+
+.bclouder .cloud {
+  width: 150px;
+  height: 45px;
+  position: relative;
+  border-radius: 20px;
+  animation: clouddrift 2s infinite;
+  background-color: #f3f3f3;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.3);
+}
+
+.bclouder .cloud:before, .bclouder .cloud:after {
+  border-radius: 100%;
+  content: "";
+  background-color: #f3f3f3;
+  display: block;
+  width: 75px;
+  height: 75px;
+  position: absolute;
+}
+
+.bclouder .cloud:before {
+  left: 24px;
+  top: -42px;
+}
+
+.bclouder .cloud:after {
+  left: 53px;
+  top: -30px;
+}
+
+.bclouder .cloud1 {
+  top: 40%;
+  left: 40%;
+}
+
+.bclouder .cloud2 {
+  top: 20%;
+  left: 10%;
+}
+
+.bclouder .cloud3 {
+  top: 20%;
+  left: 25%;
+}

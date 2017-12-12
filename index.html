@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>天氣預報</title>
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Fjalla+One&amp;subset=latin-ext">
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div id="app">
+        <div class="scene" v-html="Taiwan_map"></div>
+        <div class="info">
+            <h1>Taiwan <span>&nbsp&nbsp&nbsp<i class="fa fa-bolt"></i></span></h1>
+            <h2>&nbsp&nbsp&nbsp&nbsp&nbspWeather Map</h2>
+            <hr/>
+            <div class="forcase" v-if="now_area">
+                <h2>{{now_area.Name}}</h2>
+                <h4>{{now_area.Weather}}-降雨機率：{{now_area.RainfallRate}}%</h4>
+                <h4>{{now_area.Descrip}}&nbsp&nbsp&nbsp{{now_area.MinT}}°C~{{now_area.MaxT}}°C</h4>
+                <div class="bclouder">
+                    <div class="cloud cloud1"></div>
+                    <div class="cloud cloud2"></div>
+                    <div class="cloud cloud3"></div>
+                </div>
+                <div class="sunbox">
+                    <div class="sun"></div>
+                </div>
+                <div class="SunCould">
+                    <div class="sun"></div>
+                    <div class="cloud cloud1"></div>
+                    <div class="cloud cloud2"></div>
+                </div>
+                <div class="rainny">
+                    <div class="cloud cloud1">
+                        <div class="rain"></div>
+                        <div class="rain rain2"></div>
+                        <div class="rain rain3"></div>
+                        <div class="rain rain4"></div>
+                    </div>
+                    <div class="cloud cloud2">
+                        <div class="rain"></div>
+                        <div class="rain rain2"></div>
+                        <div class="rain rain3"></div>
+                        <div class="rain rain4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
